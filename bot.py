@@ -302,7 +302,7 @@ def bot_message(message):
                 back = types.KeyboardButton("🔙 Назад")
                 markup.row(item1, item2, item3)
                 markup.row(back)
-                subprocess.call(["/opt/bin/unblock_update.sh"])
+                subprocess.run(["/opt/bin/unblock_update.sh"])
                 level = 2
                 bot.send_message(message.chat.id, "Меню " + bypass, reply_markup=markup)
                 return
@@ -333,7 +333,7 @@ def bot_message(message):
                 markup.row(item1, item2, item3)
                 markup.row(back)
                 level = 2
-                subprocess.call(["/opt/bin/unblock_update.sh"])
+                subprocess.run(["/opt/bin/unblock_update.sh"])
                 bot.send_message(message.chat.id, "Меню " + bypass, reply_markup=markup)
                 return
 
@@ -410,7 +410,7 @@ def bot_message(message):
                                  "Учтите, после выполнения команды, роутер перезагрузится, это займет около 2 минут.",
                                  reply_markup=main)
 
-                subprocess.call(["/opt/bin/unblock_update.sh"])
+                subprocess.run(["/opt/bin/unblock_update.sh"])
                 # os.system('/opt/bin/unblock_update.sh')
                 return
 
