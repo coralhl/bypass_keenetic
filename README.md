@@ -30,7 +30,7 @@
 - [Установка Entware](https://github.com/coralhl/bypass_keenetic/wiki/Install-Entware-and-Preparation)
 - [Установка бота и скриптов](https://github.com/coralhl/bypass_keenetic/wiki/Install-bot-and-scripts)
 
-opkg install curl mc bind-dig cron dnsmasq-full ipset iptables obfs4 shadowsocks-libev-ss-redir shadowsocks-libev-config python3 python3-pip
+opkg install curl mc bind-dig cron dnsmasq-full ipset iptables shadowsocks-libev-ss-redir shadowsocks-libev-config python3 python3-pip
 
 curl -o /opt/etc/bot.py https://raw.githubusercontent.com/coralhl/bypass_keenetic/main/bot.py
 curl -o /opt/etc/bot_config.py https://raw.githubusercontent.com/coralhl/bypass_keenetic/main/bot_config.py

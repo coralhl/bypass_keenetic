@@ -23,7 +23,7 @@ keen_os_short=$(curl -s localhost:79/rci/show/version/title | tr -d \", | cut -b
 
 if [ "$1" = "-remove" ]; then
     echo "Начинаем удаление"
-    opkg remove bind-dig cron dnsmasq-full ipset iptables obfs4 shadowsocks-libev-ss-redir shadowsocks-libev-config
+    opkg remove bind-dig cron dnsmasq-full ipset iptables shadowsocks-libev-ss-redir shadowsocks-libev-config
     echo "Пакеты удалены, удаляем папки, файлы и настройки"
     ipset flush testset
     ipset flush unblocksh
@@ -68,8 +68,7 @@ if [ "$1" = "-install" ]; then
     echo "Начинаем установку"
     echo "Ваша версия KeenOS" "${keen_os_full}"
     opkg update
-    # opkg install curl mc tor tor-geoip bind-dig cron dnsmasq-full ipset iptables obfs4 shadowsocks-libev-ss-redir shadowsocks-libev-config
-    opkg install curl mc bind-dig cron dnsmasq-full ipset iptables obfs4 shadowsocks-libev-ss-redir shadowsocks-libev-config python3 python3-pip
+    opkg install curl mc bind-dig cron dnsmasq-full ipset iptables shadowsocks-libev-ss-redir shadowsocks-libev-config python3 python3-pip
     curl -O https://bootstrap.pypa.io/get-pip.py
     sleep 3
     python get-pip.py
