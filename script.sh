@@ -38,7 +38,7 @@ if [ "$1" = "-remove" ]; then
     fi
 
     chmod 777 /opt/root/get-pip.py || rm -Rfv /opt/root/get-pip.py
-    chmod 777 /opt/etc/crontab || rm -Rfv /opt/etc/crontab
+    chmod 644 /opt/etc/crontab || rm -Rfv /opt/etc/crontab
     chmod 777 /opt/etc/init.d/S22shadowsocks || rm -Rfv /opt/etc/init.d/S22shadowsocks
     chmod 777 /opt/etc/init.d/S56dnsmasq || rm -Rfv /opt/etc/init.d/S56dnsmasq
     chmod 777 /opt/etc/init.d/S99unblock || rm -Rfv /opt/etc/init.d/S99unblock
@@ -172,9 +172,9 @@ if [ "$1" = "-install" ]; then
 
     # cron file
     #rm -rf /opt/etc/crontab
-    chmod 777 /opt/etc/crontab || rm -Rfv /opt/etc/crontab
+    chmod 644 /opt/etc/crontab || rm -Rfv /opt/etc/crontab
     curl -o /opt/etc/crontab https://raw.githubusercontent.com/${repo}/bypass_keenetic/main/crontab
-    chmod 755 /opt/etc/crontab
+    chmod 644 /opt/etc/crontab
     echo "Установлено добавление задачи в cron для периодического обновления содержимого множества"
     /opt/bin/unblock_update.sh
     echo "Установлены все изначальные скрипты и скрипты разблокировок, выполнена основная настройка бота"
