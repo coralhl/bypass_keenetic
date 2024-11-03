@@ -11,7 +11,7 @@
 TAG="100-unblock-vpn.sh"
 
 sleep 1
-vpn_services="IKE|SSTP|OpenVPN|Wireguard|VPNL2TP"
+vpn_services="IKE|SSTP|OpenVPN|Wireguard|VPNL2TP|Proxy"
 vpn_check=$(curl -s localhost:79/rci/show/interface | grep -E "$vpn_services" | grep id | awk '{print $2}' | tr -d \", | uniq -u)
 #vpn_check=$(ndmc -c "show interface" | grep -E "$vpn_services" | grep id | awk '{print $2}')
 #vpn_check=$(curl -s localhost:79/rci/show/ip/name-server | grep service | grep -wv Dns | awk '{print $2}' | tr -d \", | sort -u)
