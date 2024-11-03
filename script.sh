@@ -6,9 +6,9 @@
 # Демо-бот: https://t.me/keenetic_dns_bot
 #
 # Файл: script.sh, Версия 2.2.0, последнее изменение: 24.09.2023, 22:32
-# Доработал: NetworK (https://github.com/coralhl)
+# Доработал: coralhl (https://github.com/coralhl)
 
-# оригинальный репозиторий (tas-unn), FORK by NetworK (coralhl)
+# оригинальный репозиторий (tas-unn), FORK by coralhl (coralhl)
 
 repo="coralhl"
 

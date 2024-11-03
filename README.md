@@ -57,12 +57,3 @@ mcedit /opt/etc/bot_config.py
 Полное описание:
 https://habr.com/ru/post/669314/
 -->
-
-Поддержать проект:
-* **coralhl aka NetworK**
-* `4817760309908527` Сбербанк VISA
-
-* **tas-unn aka Masterland**
-* `2204120100988217` КАРТА МИР 
-* `410017539693882` Юмани 
-* `bc1qesjaxfad8f8azu2cp4gsvt2j9a4yshsc2swey9` Биткоин кошелёк

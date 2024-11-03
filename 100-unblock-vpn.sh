@@ -6,7 +6,7 @@
 # Демо-бот: https://t.me/keenetic_dns_bot
 #
 # Файл: 100-unblock-vpn.sh, Версия 2.1.9, последнее изменение: 03.05.2023, 21:12
-# Автор файла: NetworK (https://github.com/coralhl)
+# Автор файла: coralhl (https://github.com/coralhl)
 
 TAG="100-unblock-vpn.sh"
 

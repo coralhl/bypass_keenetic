@@ -5,13 +5,8 @@
 #  Данный бот предназначен для управления обхода блокировок на роутерах Keenetic
 #  Демо-бот: https://t.me/keenetic_dns_bot
 #
-#  Файл: bot.py, Версия 2.2.1, последнее изменение: 02.10.2023, 00:55
-#  Доработал: NetworK (https://github.com/coralhl)
-
-# ВЕРСИЯ СКРИПТА 2.2.1
-# ЕСЛИ ВЫ ХОТИТЕ ПОДДЕРЖАТЬ РАЗРАБОТЧИКОВ - МОЖЕТЕ ОТПРАВИТЬ ДОНАТ НА ЛЮБУЮ СУММУ
-# coralhl aka NetworK - 4817 7603 0990 8527 (Сбербанк VISA)
-# tas-unn aka Materland - 2204 1201 0098 8217 (КАРТА МИР)
+#  Файл: bot.py, Версия 2.2.2, последнее изменение: 03.11.2024, 18:00
+#  Доработал: coralhl (https://github.com/coralhl)
 
 import asyncio
 import subprocess
@@ -379,14 +374,14 @@ def bot_message(message):
             if message.text == '♻️ Установка & переустановка':
                 markup = types.ReplyKeyboardMarkup(resize_keyboard=True)
                 item1 = types.KeyboardButton("Оригинальная версия")
-                item2 = types.KeyboardButton("Fork by NetworK")
+                item2 = types.KeyboardButton("Fork by coralhl")
                 back = types.KeyboardButton("🔙 Назад")
                 markup.row(item1, item2)
                 markup.row(back)
                 bot.send_message(message.chat.id, 'Выберите репозиторий', reply_markup=markup)
                 return
 
-            if message.text == "Оригинальная версия" or message.text == "Fork by NetworK":
+            if message.text == "Оригинальная версия" or message.text == "Fork by coralhl":
                 if message.text == "Оригинальная версия":
                     repo = "tas-unn"
                 else:
