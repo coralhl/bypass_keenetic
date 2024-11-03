@@ -48,8 +48,8 @@ if [ "$1" = "-remove" ]; then
     chmod 777 /opt/bin/unblock_dnsmasq.sh || rm -rfv /opt/bin/unblock_dnsmasq.sh
     chmod 777 /opt/bin/unblock_update.sh || rm -rfv /opt/bin/unblock_update.sh
     chmod 777 /opt/bin/unblock_ipset.sh || rm -rfv /opt/bin/unblock_ipset.sh
-    chmod 777 /opt/etc/unblock.dnsmasq || rm -rfv /opt/etc/unblock.dnsmasq
-    chmod 777 /opt/etc/dnsmasq.conf || rm -rfv /opt/etc/dnsmasq.conf
+    chmod 644 /opt/etc/unblock.dnsmasq || rm -rfv /opt/etc/unblock.dnsmasq
+    chmod 644 /opt/etc/dnsmasq.conf || rm -rfv /opt/etc/dnsmasq.conf
     echo "Созданные папки, файлы и настройки удалены"
     echo "Если вы хотите полностью отключить DNS Override, перейдите в меню Сервис -> DNS Override -> DNS Override ВЫКЛ. После чего включится встроенный (штатный) DNS и роутер перезагрузится."
     #echo "Отключаем opkg dns-override"
@@ -162,9 +162,9 @@ if [ "$1" = "-install" ]; then
 
     # dnsmasq.conf
     #rm -rf /opt/etc/dnsmasq.conf
-    chmod 777 /opt/etc/dnsmasq.conf || rm -rfv /opt/etc/dnsmasq.conf
+    chmod 644 /opt/etc/dnsmasq.conf || rm -rfv /opt/etc/dnsmasq.conf
     curl -o /opt/etc/dnsmasq.conf https://raw.githubusercontent.com/${repo}/bypass_keenetic/main/dnsmasq.conf
-    chmod 755 /opt/etc/dnsmasq.conf
+    chmod 644 /opt/etc/dnsmasq.conf
     sed -i "s/192.168.1.1/${lanip}/g" /opt/etc/dnsmasq.conf
     sed -i "s/40500/${dnsovertlsport}/g" /opt/etc/dnsmasq.conf
     sed -i "s/40508/${dnsoverhttpsport}/g" /opt/etc/dnsmasq.conf
