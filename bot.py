@@ -373,8 +373,8 @@ def bot_message(message):
 
             if message.text == '♻️ Установка & переустановка':
                 markup = types.ReplyKeyboardMarkup(resize_keyboard=True)
-                item1 = types.KeyboardButton("Оригинальная версия")
-                item2 = types.KeyboardButton("Fork by coralhl")
+                item1 = types.KeyboardButton("Fork by coralhl")
+                item2 = types.KeyboardButton("Оригинальная версия")
                 back = types.KeyboardButton("🔙 Назад")
                 markup.row(item1, item2)
                 markup.row(back)
@@ -406,7 +406,7 @@ def bot_message(message):
                                  reply_markup=main)
 
                 bot.send_message(message.chat.id,
-                                 "Что бы завершить настройку роутера, Зайдите в меню сервис -> DNS Override -> ВКЛ. "
+                                 "Чтобы завершить настройку роутера, Зайдите в меню бота Сервис -> DNS Override -> ВКЛ. "
                                  "Учтите, после выполнения команды, роутер перезагрузится, это займет около 2 минут.",
                                  reply_markup=main)
 
